@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dany Zahir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="flex justify-between items-center px-6 py-4 fixed w-full bg-gray-900 z-50 shadow-lg">
+        <div class="text-white text-2xl font-bold">Dany Zahir</div>
+        <nav class="space-x-6 hidden md:flex">
+            <a href="#about" class="text-white hover:text-blue-400 transition">About</a>
+            <a href="#skills" class="text-white hover:text-blue-400 transition">Skills</a>
+            <a href="#projects" class="text-white hover:text-blue-400 transition">Projects</a>
+            <a href="#contact" class="text-white hover:text-blue-400 transition">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero pt-24">
+        <img src="img/gambar.jpg" alt="Image 1" class="bordered-image mb-6" />
+        <h1 class="text-black">Dany Zahir</h1>
+        <p class="text-black">Web Developer | Laravel & Firebase Specialist</p>
+    </section>
+
+    <section id="about" class="container text-center">
+        <h2 class="section-title">About Me</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            Saya adalah mahasiswa Teknik Informatika di Polindra dengan minat yang besar di bidang web development.
+            Saya menguasai berbagai skill dalam mengembangkan aplikasi web menggunakan Laravel, Firebase, serta pembuatan antarmuka pengguna yang intuitif dan menarik.
+            Saya memiliki semangat tinggi dalam menciptakan aplikasi yang tidak hanya fungsional, tetapi juga mudah digunakan dan memberikan pengalaman pengguna yang terbaik.
+        </p>
+    </section>
+
+    <section id="skills" class="container text-center my-12">
+        <h2 class="section-title text-3xl font-bold mb-8">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-center">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel" class="w-20 h-20 mx-auto">
+                <p class="mt-2 font-semibold">Laravel</p>
+            </div>
+            <div class="card">
+                <img src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png" alt="Firebase" class="w-20 h-20 mx-auto">
+                <p class="mt-2 font-semibold">Firebase</p>
+            </div>
+            <div class="card">
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-sql-computer-programming-flaticons-lineal-color-flat-icons.png" alt="SQL" class="w-20 h-20 mx-auto">
+                <p class="mt-2 font-semibold">SQL</p>
+            </div>
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="w-20 h-20 mx-auto">
+                <p class="mt-2 font-semibold">JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container mx-auto px-4 py-12 text-center">
+        <h2 class="section-title text-3xl font-bold mb-10">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="card shadow-lg rounded-xl p-6 bg-white">
+                <img src="img/gambar2.png" alt="Attendance System" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-teal-600">Sistem peminjaman perpustakaan </h3>
+            </div>
+            <div class="card shadow-lg rounded-xl p-6 bg-white">
+                <img src="img/gambar3.png" alt="Teacher Agenda App" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-teal-600">Si Jareng(belajar bareng sistem pengolahan private class )</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container text-center">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi !</p>
+
+        <form id="contactForm" class="max-w-xl mx-auto mt-6 space-y-4">
+            <div>
+                <input type="text" id="name" name="name" placeholder="Your Name" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            </div>
+            <div>
+                <button type="submit"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                    Send Message
+                </button>
+            </div>
+        </form>
+
+        <div id="thankYouModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
+            <div class="bg-white p-8 rounded-lg text-center shadow-lg transform scale-90 transition-all duration-300">
+                <div class="flex justify-center items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-teal-600">Terima kasih sudah mampir</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Dany Zahir. All rights reserved.</p>
+        <a href="mailto:danyzahir@example.com">Email Me</a>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const modal = document.getElementById('thankYouModal');
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100', 'pointer-events-auto');
+
+            setTimeout(() => {
+                modal.classList.remove('opacity-100', 'pointer-events-auto');
+                modal.classList.add('opacity-0', 'pointer-events-none');
+            }, 2000); 
+        });
+    </script>
+
+</body>
+
+</html>
